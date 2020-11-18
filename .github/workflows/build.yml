@@ -1,0 +1,12 @@
+name: Build
+on: [push]
+jobs:
+  build-and-test:
+    runs-on: windows-latest
+    steps:
+      - name: Clone
+        uses: actions/checkout@v2
+      - name: Configure
+        run: cmake .
+      - name: Build
+        run: cmake --build . --config Debug
