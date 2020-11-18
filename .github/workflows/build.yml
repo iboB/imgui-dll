@@ -15,8 +15,6 @@ jobs:
         shell: cmd
         run: |
           cd imgui
-          "%VS_PATH%\VC\Auxiliary\Build\vcvarsall.bat" x64
-          SOME_ERROR_HERE
           echo #ifdef _EXPORT                                  >  example_single_file.cpp
           echo #  define IMGUI_API __declspec(dllexport)       >> example_single_file.cpp
           echo #else                                           >> example_single_file.cpp
